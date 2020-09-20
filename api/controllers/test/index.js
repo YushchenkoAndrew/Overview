@@ -47,7 +47,7 @@ module.exports = {
     request.get(option).on("response", (res) => {
       var data = [];
 
-      sails.log(`URL: ${res.url}\n`);
+      sails.log(`URL: ${res.request.uri.path}`);
       sails.log(`Status: ${res.statusCode}\n`);
       // if (res.statusCode !== 200) throw "notFound";
 
@@ -57,9 +57,9 @@ module.exports = {
       res.on("end", () => {
         let obj = JSON.parse(data.join(""));
 
-        console.log("Repositories:");
+        // console.log("Repositories:");
         for (let i in obj) {
-          console.log(`    ${obj[i].name}`);
+          // console.log(`    ${obj[i].name}`);
           repos[i] = {};
 
           option.url = `https://api.github.com/repos/YushchenkoAndrew/${obj[i].name}/languages`;
@@ -67,13 +67,21 @@ module.exports = {
           request.get(option).on("response", (res) => {
             res.setEncoding("utf-8");
             res.on("data", (chunk) => {
-              // repos[res.url.split("/").slice(-2)[0]] = { ...JSON.parse(chunk) };
-              console.log(chunk);
+              repos[res.request.uri.path.split("/").slice(-2)[0]] = JSON.parse(
+                chunk
+              );
+
+              console.log(repos);
+
+              // console.log(chunk);
             });
           });
         }
       });
     });
+
+    // console.log(repos);
+
     // console.dir(result, { depth: null });
 
     // return "Test";
