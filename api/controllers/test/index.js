@@ -1,4 +1,6 @@
 /* eslint-disable quotes */
+const github = module.require("../GithubController");
+
 module.exports = {
   friendlyName: "Index",
 
@@ -28,61 +30,16 @@ module.exports = {
     sails.log("Action testing...");
     sails.log();
     // sails.log(`id = ${id}`);
-
     // if (!id) {
     // throw "notFound";
     // }
 
-    var repos = {};
+    // github.getUserInfo("YushchenkoAndrew");
 
-    let request = require("request");
+    // while (!github.isFinished()) {}
+    // console.log(github.repos);
 
-    let option = {
-      url: "https://api.github.com/users/YushchenkoAndrew/repos",
-      headers: {
-        "User-Agent": "YushchenkoAndrew",
-      },
-    };
-
-    request.get(option).on("response", (res) => {
-      var data = [];
-
-      sails.log(`URL: ${res.request.uri.path}`);
-      sails.log(`Status: ${res.statusCode}\n`);
-      // if (res.statusCode !== 200) throw "notFound";
-
-      res.setEncoding("utf-8");
-      res.on("data", (chunk) => data.push(chunk));
-
-      res.on("end", () => {
-        let obj = JSON.parse(data.join(""));
-
-        // console.log("Repositories:");
-        for (let i in obj) {
-          // console.log(`    ${obj[i].name}`);
-          repos[i] = {};
-
-          option.url = `https://api.github.com/repos/YushchenkoAndrew/${obj[i].name}/languages`;
-
-          request.get(option).on("response", (res) => {
-            res.setEncoding("utf-8");
-            res.on("data", (chunk) => {
-              repos[res.request.uri.path.split("/").slice(-2)[0]] = JSON.parse(
-                chunk
-              );
-
-              console.log(repos);
-
-              // console.log(chunk);
-            });
-          });
-        }
-      });
-    });
-
-    // console.log(repos);
-
-    // console.dir(result, { depth: null });
+    // console.dir(github.repos, { depth: null });
 
     // return "Test";
   },
