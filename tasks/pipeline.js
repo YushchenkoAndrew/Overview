@@ -38,6 +38,9 @@ var cssFilesToInject = [
   // in no particular order.  To customize the ordering, add additional
   // items here, _above_ this one.
   "styles/**/*.css",
+
+  // Ignore injected scripts
+  "!style/test/*.css",
 ];
 
 //   ██████╗██╗     ██╗███████╗███╗   ██╗████████╗   ███████╗██╗██████╗ ███████╗
