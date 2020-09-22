@@ -15,6 +15,7 @@ function drawChart() {
 
   var options = {
     title: "Most Used languages",
+    backgroundColor: "#fafafa",
     titleTextStyle: {
       fontSize: 24,
     },

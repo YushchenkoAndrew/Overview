@@ -1,7 +1,33 @@
 body {
   font-family: "Courier New", Courier, monospace;
-
+  background-color: #fafafa;
   /* background-color: black; */
+}
+
+.navbar-nav {
+  display: block;
+
+  list-style: none;
+  align-items: center;
+  /* width: 80%; */
+
+  margin-right: 30px;
+  margin-left: auto;
+}
+
+.nav-link {
+  font-size: 40px;
+
+  display: block;
+  align-items: center;
+  color: #000;
+
+  filter: grayscale(100%) opacity(0.7);
+  transition: 0.5s;
+}
+
+.nav-link:hover {
+  color: #777;
 }
 
 .Avatar {
@@ -16,7 +42,6 @@ body {
   /* border-top-right-radius: 110px; */
 
   margin-right: 30px;
-  margin-left: auto;
 }
 
 .name {
@@ -24,9 +49,10 @@ body {
 
   width: 561px;
   height: 41px;
+  align-items: center;
 
   font-family: Trebuchet MS, sans-serif;
-  font-size: 30px;
+  font-size: 40px;
   font-weight: bold;
   font-stretch: normal;
   font-style: normal;
@@ -50,8 +76,81 @@ hr.solid {
   border-top: 3px solid #bbb;
 }
 
+.about_me {
+  margin-left: 50px;
+
+  width: 561px;
+  height: 41px;
+
+  font-family: Comic Sans MS, Comic Sans, cursive;
+  font-size: 38px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+
+  line-height: normal;
+  letter-spacing: normal;
+  color: #575159;
+}
+
 #donutchart {
   width: 700px;
   height: 500px;
   margin-left: auto;
+}
+
+.text {
+  margin-left: 50px;
+
+  width: 561px;
+  height: 41px;
+
+  font-family: Didot, serif;
+  font-size: 30px;
+  /* font-weight: bold; */
+  font-stretch: normal;
+  font-style: normal;
+
+  line-height: normal;
+  letter-spacing: normal;
+  color: #575159;
+}
+
+.interest {
+  margin-left: 50px;
+
+  width: 561px;
+  height: 41px;
+
+  font-family: Comic Sans MS, Comic Sans, cursive;
+  font-size: 30px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+
+  line-height: normal;
+  letter-spacing: normal;
+  color: #575159;
+}
+
+.box {
+  background-color: #fff;
+
+  border: double #575159;
+  padding: 15px;
+
+  border-radius: 5px;
+
+  width: min-content;
+
+  font-family: Didot, serif;
+  font-size: 30px;
+  font-stretch: normal;
+  font-style: italic;
+
+  line-height: normal;
+  letter-spacing: normal;
+  color: #575159;
+
+  /* margin: 20px; */
 }
