@@ -1,6 +1,7 @@
 body {
   font-family: "Courier New", Courier, monospace;
   background-color: #fafafa;
+  overflow-x: hidden;
   /* background-color: black; */
 }
 
@@ -52,7 +53,7 @@ body {
   align-items: center;
 
   font-family: Trebuchet MS, sans-serif;
-  font-size: 40px;
+  font-size: 35px;
   font-weight: bold;
   font-stretch: normal;
   font-style: normal;
@@ -83,7 +84,7 @@ hr.solid {
   height: 41px;
 
   font-family: Comic Sans MS, Comic Sans, cursive;
-  font-size: 38px;
+  font-size: 32px;
   font-weight: bold;
   font-stretch: normal;
   font-style: normal;
@@ -95,7 +96,7 @@ hr.solid {
 
 #donutchart {
   width: 700px;
-  height: 500px;
+  height: 300px;
   margin-left: auto;
 }
 
@@ -106,7 +107,7 @@ hr.solid {
   height: 41px;
 
   font-family: Noto Sans, sans-serif;
-  font-size: 30px;
+  font-size: 25px;
   /* font-weight: bold; */
   font-stretch: normal;
   font-style: normal;
@@ -123,7 +124,7 @@ hr.solid {
   height: 41px;
 
   font-family: Comic Sans MS, Comic Sans, cursive;
-  font-size: 30px;
+  font-size: 25px;
   font-weight: bold;
   font-stretch: normal;
   font-style: normal;
@@ -144,7 +145,7 @@ hr.solid {
   width: min-content;
 
   font-family: Didot, serif;
-  font-size: 30px;
+  font-size: 25px;
   font-stretch: normal;
   font-style: italic;
 
@@ -153,4 +154,9 @@ hr.solid {
   color: #575159;
 
   /* margin: 20px; */
+}
+
+.context {
+  margin-left: 5vw;
+  width: 30vw;
 }
