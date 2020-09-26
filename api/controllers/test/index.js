@@ -34,7 +34,7 @@ module.exports = {
     // throw "notFound";
     // }
 
-    // github.getUserInfo("YushchenkoAndrew");
+    github.getUserInfo("YushchenkoAndrew");
 
     // while (!github.isFinished()) {}
     // console.log(github.repos);
