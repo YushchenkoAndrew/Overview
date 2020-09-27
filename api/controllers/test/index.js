@@ -29,7 +29,7 @@ module.exports = {
     // All done.
     sails.log("Action testing...");
     sails.log();
-    // sails.log(`id = ${id}`);
+    sails.log(`id = ${id}`);
     // if (!id) {
     // throw "notFound";
     // }

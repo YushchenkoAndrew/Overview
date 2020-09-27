@@ -42,11 +42,11 @@ module.exports = {
               )[0];
 
               this.getRepoInfo(user, name, "/languages", (obj, lang, name) => {
-                // obj[name].languages = lang;
-                for (let key in lang)
-                  obj.languages[key] =
-                    (key in obj.languages ? obj.languages[key] : 0) +
-                    Number(lang[key]);
+                obj[name].languages = lang;
+                // for (let key in lang)
+                //   obj.languages[key] =
+                //     (key in obj.languages ? obj.languages[key] : 0) +
+                //     Number(lang[key]);
               });
 
               this.getFileContext(user, name);
